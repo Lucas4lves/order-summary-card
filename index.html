@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Order summary card</title>
+
+  <style>
+
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+    *, ::after, ::before {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body { 
+      height: 100vh;
+      font-family: 'Red Hat Display', sans-serif;
+      background-color: hsl(225, 100%, 94%);
+    }
+
+    .main { 
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 90%;
+      overflow-y: auto;
+    }
+
+    .main__card { 
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: .8em;
+      padding-top: 0;
+      align-items: center;
+      height: fit-content;
+      border-radius: 10px;
+      background-color: hsl(0, 0%, 100%);
+      box-shadow: 5px 1px 10px 2px rgba(0, 0, 0, 0.4);
+    }
+
+    .main__card--illustration { 
+      height: 30%;
+      width: calc(100% + 1.6em);
+      border-top-right-radius: 10px;
+      border-top-left-radius: 10px;
+    }
+
+    .main__card--heading { 
+      padding: .5em;
+      margin-top: 1em;
+      font-size: 1.125em;
+      font-weight: 900;
+    }
+
+    .main__card--call-to-action {
+      padding: .5em;
+      padding-top: 0;
+      font-size: .8em;
+      margin-bottom: 1em;
+      text-align: center;
+    }
+
+    .main__card--fee-log { 
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      min-width: 80%;
+      padding: .8em;
+      background-color: hsl(225, 100%, 98%);
+      border-radius: 10px;
+      font-size: .8em;
+    }
+
+    .main__card--change-fee { 
+      border: none;
+      padding-right: 1em;
+      color: hsl(245, 75%, 52%);
+    }
+
+    .main__card--change-fee:hover { 
+      color: hsla(241, 46%, 52%, 0.836);
+    }
+
+    .main__card--fee-plan { 
+      margin-right: 1em;
+      display: flex;
+      align-items: center;
+    }
+
+    .main__card--fee-icon { 
+      content: url(./images/icon-music.svg);
+      margin-right: 1em;
+    }
+
+    .main__card--actions { 
+      display: flex;
+      margin-top: 1em;
+      width: 100%;
+      flex-direction: column;
+    }
+
+    .main__card--actions button { 
+        padding: .8em;
+        margin-top: .2em;
+        border-radius: 10px;
+        border: none;
+        cursor: pointer;
+        font-size: .7em;
+        font-weight: 900;
+    }
+
+    .main__card--proceed-to-payment {
+      background-color: hsl(245, 75%, 52%);
+      border: none;
+      border-radius: 10px;
+      color: hsl(0, 0%, 100%);
+      
+    }
+
+    .main__card--proceed-to-payment:hover { 
+      background-color: hsla(241, 46%, 52%, 0.836);
+    }
+
+    .main__card--cancel-order {
+      background-color: inherit;
+    }
+
+    .hell { 
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 100%;
+    }
+    
+    .footer-content{
+      margin-top: 1em;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      max-height: 100%;
+      font-size: 11px;
+    }
+
+
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+
+    @media screen and (min-width: 260px) {
+      .main__card { 
+        width: 80%;
+      }
+    }
+
+    @media screen and (min-width: 728px) {
+      .main__card { 
+        width: 60%;
+      }
+    }
+
+    @media screen and (min-width: 1024px) {
+      .main__card { 
+        width: 20%;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+  <main class="main">
+    <article class="main__card">
+      <img src="./images/illustration-hero.svg" class="main__card--illustration">
+      <h1 class="main__card--heading">Order Summary</h1>
+      <p class="main__card--call-to-action">You can now listen to millions of songs, audiobooks, and podcasts on any device anywhere you like!</p>
+      <div class="main__card--fee-log">
+        <div class="main__card--fee-plan">
+          <span class="main__card--fee-icon">
+          </span>
+          <div class="hell">
+            <h4 class="main__card--fee-heading">Annual Plan</h4>
+            <p class="main__card--fee-price">$59.99/year</div>
+          </p>
+        </div>
+        <a href="#" class="main__card--change-fee">Change</a> 
+      </div>
+      <div class="main__card--actions">
+        <button class="main__card--proceed-to-payment">Proceed to Payment</button>
+        <button class="main__card--cancel-order">Cancel Order</button>
+      </div>
+    </article>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <p>Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.</p> 
+      <p>Coded by <a href="https://github.com/Lucas4lves">Lucas Alves</a> <span class="year"></span>.</p>
+    </div>
+  </footer>  
+</body>
+<script src="./footer.js"></script>
+</html>
